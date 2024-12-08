@@ -1,0 +1,123 @@
+/* General Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-blue);
+    padding: 4px 12px; /* Further reduced padding */
+    height: 170px; /* Adjust height automatically */
+}
+
+/* Navbar Brand - Image and Title */
+/* General Navbar Brand Container */
+/* General Navbar Brand Container */
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Vertically align image and title */
+    text-decoration: none;
+    margin-left: 80px; /* Adjust horizontal position */
+    height: auto; /* Flexible height based on content */
+}
+
+/* Container for Image and Title */
+.navbar-brand-content {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 12px; /* Space between image and text */
+    width: 100%; /* Occupy full navbar width */
+    justify-content: center; /* Center the content horizontally */
+}
+
+/* Styling for the Logo Image */
+.navbar-brand img {
+    height: 90px; /* Logo height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: auto; /* Push the image to the far left */
+}
+
+/* Styling for the Title Text */
+/* Styling for the Title Text */
+.navbar-brand .brand-title {
+    font-size: 30px; /* Font size */
+    font-weight: bold;
+    color: var(--white); /* Title color */
+    line-height: 1.3; /* Line spacing for multi-line text */
+    position: absolute; /* Positioning title independently */
+    top: 10%; /* Adjust vertical position (50% centers it) */
+    left: 50%; /* Adjust horizontal position */
+    transform: translate(-50%, -50%); /* Centering adjustment */
+    text-align: center; /* Center-align text */
+    margin: 0; /* Remove default margins */
+}
+
+
+/* Centered Navbar Links (Home, Messages, etc.) */
+.navbar-center {
+    
+    /* Reduced space between title and navbar items */
+    position: absolute;
+    top: 24%;  /* Adjust this percentage to move it up or down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 8px; /* Further reduced spacing between nav items */
+}
+
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    padding: 6px 10px; /* Further reduced padding */
+    border-radius: 4px; /* Smaller border radius */
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(2, 147, 211, 0.8); /* Hover effect */
+}
+
+/* Right-side Navbar (Login, User Profile, etc.) */
+.navbar-right {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px; /* Further reduced gap between items */
+    margin-left: auto;
+    padding: 4px 0;
+    position: relative; /* Allows positioning */
+    top: 20px;
+}
+
+/* Navbar Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;
+        padding: 8px;
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        margin-top: 5px;
+    }
+
+    .navbar-right {
+        flex-direction: column;
+        margin-top: 5px;
+    }
+
+    .navbar-brand img {
+        height: 25px; /* Smaller logo on mobile */
+    }
+}
